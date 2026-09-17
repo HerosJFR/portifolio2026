@@ -1,0 +1,597 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #F0F4F8; /* MUDADO: Fundo off-white com toque azul-névoa suave */
+    color: #3A4750; /* MUDADO: Texto cinza azulado escuro */
+}
+
+/* =======================================================
+   2. ESTILOS DO CABEÇALHO E MENU (FLORICULTURA)
+   ======================================================= */
+header {
+    background-color: #FFF;
+    border-bottom: 1px solid #D2E2EA; /* MUDADO: Linha sutil em azul claro */
+    padding: 20px;
+}
+
+#header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#logo {
+    font-size: 16px;
+    font-weight: bold;
+    color: #79A3B1; /* MUDADO: Azul pastel principal */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#cabecalho h1 {
+    font-size: 26px;
+    color: #456268; /* MUDADO: Azul-petróleo acinzentado sutil */
+    font-weight: 400;
+}
+
+nav {
+    background-color: #E8EEF1; /* MUDADO: Barra de navegação em azul gelo pastel */
+    padding: 12px 20px;
+}
+
+.nav_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul.login li {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #4A5A6A; /* MUDADO: Azul escuro suave para leitura */
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: lowercase;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #79A3B1; /* MUDADO: Transição para azul pastel no hover */
+}
+
+.titulo-secao {
+    text-align: center;
+    color: #456268; /* MUDADO: Azul-petróleo acinzentado */
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+/* Grid de Flores */
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+/* Card Individual de Flor */
+.produto-card {
+    background-color: #FFF;
+    border: 1px solid #D2E2EA; /* MUDADO: Borda azul sutil */
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(121, 163, 177, 0.08); /* MUDADO: Sombra leve azulada */
+}
+
+/* Espaço para futuras imagens das flores */
+.produto-foto-placeholder {
+    background-color: #F0F4F8; /* MUDADO: Fundo azul gelo para os quadrados das flores */
+    height: 180px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: #79A3B1; /* MUDADO: Ícones padrão em azul */
+}
+
+/* Customização específica para destacar a Tulipa Azul se quiser */
+.produtos-grid .produto-card:first-child .produto-foto-placeholder {
+    background-color: #D6E5FA; /* MUDADO: Azul céu pastel leve em perfeita harmonia */
+}
+
+.produto-card h3 {
+    color: #456268; /* MUDADO: Título do card em azul-petróleo */
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.produto-desc {
+    color: #708090; /* MUDADO: Descrição em azul ardósia sutil */
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.btn-comprar {
+    background-color: #79A3B1; /* MUDADO: Botão em azul pastel */
+    color: #FFF;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.btn-comprar:hover {
+    background-color: #628391; /* MUDADO: Tom um pouco mais profundo no hover */
+}
+
+/* Seção de Buquês */
+.secao-buques {
+    margin-bottom: 60px;
+}
+
+.buques-banner {
+    background-color: #E8EEF1; /* MUDADO: Fundo do banner em azul gelo pastel */
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    gap: 30px;
+}
+
+.buques-conteudo {
+    flex: 2;
+}
+
+.buques-conteudo h2 {
+    color: #456268; /* MUDADO */
+    margin-bottom: 15px;
+}
+
+.buques-conteudo p {
+    color: #4A5A6A; /* MUDADO */
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: #79A3B1; /* MUDADO */
+    border: 1px solid #79A3B1; /* MUDADO */
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-secundario:hover {
+    background-color: #79A3B1; /* MUDADO */
+    color: #FFF;
+}
+
+.buques-imagem-placeholder {
+    flex: 1;
+    background-color: #FFF;
+    height: 150px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 54px;
+}
+
+/* Seção de Pedido Personalizado */
+.secao-personalizado {
+    margin-bottom: 40px;
+}
+
+.personalizado-card {
+    background-color: #FFF;
+    border: 2px dashed #79A3B1; /* MUDADO: Borda pontilhada em azul pastel */
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.personalizado-card h2 {
+    color: #79A3B1; /* MUDADO: Título em azul pastel */
+    margin-bottom: 15px;
+}
+
+.personalizado-card p {
+    color: #5A6A7A; /* MUDADO */
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.btn-primary-link {
+    display: inline-block;
+    background-color: #79A3B1; /* MUDADO */
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary-link:hover {
+    background-color: #628391; /* MUDADO */
+}
+
+/* Ajuste de responsividade para telas menores */
+@media (max-width: 768px) {
+    .buques-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+body.portfolio-page {
+    background: linear-gradient(135deg, #00d4ff 0%, #0077b6 40%, #00f5d4 100%) !important;
+    background-attachment: fixed !important;
+    color: #0f3443 !important;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Container de Bolhas Animadas no Fundo */
+body.portfolio-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Padrão clássico de vetor de luz abstrato */
+    background-image: linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
+    background-size: 200px 200px;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Bolhas de Sabão em CSS flutuando pelo fundo */
+.bg-bubbles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.1) 40%, rgba(0, 180, 216, 0.3) 80%, rgba(255, 255, 255, 0) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    box-shadow: inset -5px -5px 12px rgba(0, 0, 0, 0.08), 0 4px 10px rgba(255, 255, 255, 0.5);
+    animation: flyUp 12s infinite linear;
+}
+
+/* Tamanhos e posições variadas para as bolhas */
+.bubble:nth-child(1) { left: 10%; width: 80px; height: 80px; animation-duration: 10s; animation-delay: 0s; }
+.bubble:nth-child(2) { left: 30%; width: 40px; height: 40px; animation-duration: 7s; animation-delay: 2s; }
+.bubble:nth-child(3) { left: 55%; width: 110px; height: 110px; animation-duration: 15s; animation-delay: 1s; }
+.bubble:nth-child(4) { left: 75%; width: 60px; height: 60px; animation-duration: 9s; animation-delay: 4s; }
+.bubble:nth-child(5) { left: 90%; width: 90px; height: 90px; animation-duration: 13s; animation-delay: 3s; }
+
+@keyframes flyUp {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.8; }
+    90% { opacity: 0.8; }
+    100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+}
+
+/* Container do Portfólio */
+.portfolio-container {
+    max-width: 650px;
+    width: 100%;
+    margin: 80px auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Vidro de Alta Transparência (Efeito Windows Aero) */
+.portfolio-perfil {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: rgba(255, 255, 255, 0.25) !important; /* Mais transparente */
+    backdrop-filter: blur(20px) saturate(180%) !important; /* Desfoque intenso estilo Windows 7 */
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    padding: 35px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
+    box-shadow: 
+        0 15px 35px rgba(0, 50, 100, 0.25), 
+        inset 0 2px 2px rgba(255, 255, 255, 0.6), /* Brilho de reflexo no topo */
+        inset 0 -2px 10px rgba(255, 255, 255, 0.2);
+    margin-bottom: 35px;
+}
+
+/* Esfera Espelhada / Moldura Aquosa para Foto */
+.portfolio-foto {
+    width: 140px; /* Tamanho aumentado e robusto */
+    height: 140px; /* Mantém a proporção exata 1:1 para ser um círculo perfeito */
+    flex-shrink: 0; /* Impede que o círculo amasse ou fique "fino" em telas menores */
+    background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(0,245,212,0.3)) !important;
+    border-radius: 50% !important; /* Força o formato perfeitamente redondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid rgba(255, 255, 255, 0.9) !important; /* Borda de vidro mais espessa */
+    box-shadow: 
+        0 10px 25px rgba(0, 0, 0, 0.2),
+        inset 0 4px 12px rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Brilho Glossy curvo tridimensional por cima da foto */
+.portfolio-foto::after {
+    content: '';
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    width: 110%;
+    height: 55%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0) 100%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.portfolio-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta a imagem proporcionalmente para encaixar no círculo */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Textos Vibrantes */
+.portfolio-info h1 {
+    color: #ffffff !important;
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 30, 60, 0.4);
+    margin-bottom: 8px;
+}
+
+.portfolio-info p {
+    color: #e2f7f5 !important;
+    font-size: 16px;
+    text-shadow: 0 1px 2px rgba(0, 30, 60, 0.3);
+    line-height: 1.4;
+}
+.portfolio-projetos-container {
+    background: rgba(255, 255, 255, 0.18) !important;
+    backdrop-filter: blur(20px) saturate(170%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(170%);
+    padding: 35px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.45) !important;
+    box-shadow: 
+        0 15px 35px rgba(0, 40, 80, 0.2), 
+        inset 0 1.5px 1.5px rgba(255, 255, 255, 0.5);
+    margin-bottom: 35px;
+}
+
+.portfolio-projetos-container h2 {
+    color: #ffffff !important;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 30, 60, 0.4);
+    text-align: center;
+}
+
+/* Grid Organizador */
+.portfolio-projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+/* FIX: ESTILIZAÇÃO COMPLETA DOS LINKS DE PROJETO (FRUTIGER ECO-GLOSS) */
+.portfolio-link-card {
+    display: block !important;
+    text-decoration: none !important; /* Força a remoção de qualquer sublinhado */
+    padding: 25px !important;
+    border-radius: 18px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    cursor: pointer !important;
+    
+    /* Gradiente Verde Gel Líquido (Estilo Windows Live / Xbox 360) */
+    background: linear-gradient(to bottom, #52b788 0%, #34a0a4 40%, #164973 100%) !important;
+    border: 2px solid rgba(255, 255, 255, 0.5) !important;
+    box-shadow: 
+        0 8px 20px rgba(0, 50, 40, 0.3), 
+        inset 0 2px 3px rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Reflexo Elíptico de Luz (Simula vidro convexo/plástico de CD) */
+.portfolio-link-card::before {
+    content: '' !important;
+    position: absolute !important;
+    top: -5px !important;
+    left: -10% !important;
+    width: 120% !important;
+    height: 50% !important;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%) !important;
+    border-radius: 0 0 50% 50% / 0 0 25% 25% !important;
+    pointer-events: none !important;
+    z-index: 2 !important;
+}
+
+/* Efeito de Brilho Dinâmico (Shine) Correndo no Fundo ao passar o mouse */
+.portfolio-link-card::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -150% !important;
+    width: 50% !important;
+    height: 100% !important;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%) !important;
+    transform: skewX(-30deg) !important;
+    transition: none !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
+}
+
+/* Comportamento Hover (Passar o Mouse) */
+.portfolio-link-card:hover {
+    transform: translateY(-5px) scale(1.02) !important;
+    box-shadow: 
+        0 15px 30px rgba(0, 40, 80, 0.4), 
+        0 0 20px rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Ativa a animação de brilho correndo ao dar hover */
+.portfolio-link-card:hover::after {
+    left: 150% !important;
+    transition: left 0.8s ease-in-out !important;
+}
+
+/* Forçando cores e tamanhos dos textos internos dos Links */
+.portfolio-link-card h3 {
+    color: #ffffff !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    margin-bottom: 8px !important;
+    text-shadow: 0 2px 4px rgba(0, 30, 20, 0.6) !important;
+    text-align: left !important;
+}
+
+.portfolio-link-card p {
+    color: #e8f5e9 !important;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    text-shadow: 0 1px 2px rgba(0, 30, 20, 0.4) !important;
+    text-align: left !important;
+}
+
+/* CARD 2: VERSÃO AZUL AQUA (Estilo Windows Aero Clássico) */
+.portfolio-link-card.projeto-azul {
+    background: linear-gradient(to bottom, #00b4db 0%, #0077b6 40%, #03045e 100%) !important;
+    border: 2px solid rgba(255, 255, 255, 0.5) !important;
+    box-shadow: 
+        0 8px 20px rgba(0, 30, 60, 0.3), 
+        inset 0 2px 3px rgba(255, 255, 255, 0.6) !important;
+}
+
+.portfolio-link-card.projeto-azul h3 {
+    text-shadow: 0 2px 4px rgba(0, 20, 50, 0.6) !important;
+}
+
+.portfolio-link-card.projeto-azul p {
+    color: #e0f7fa !important;
+    text-shadow: 0 1px 2px rgba(0, 20, 50, 0.4) !important;
+}
+/* Rodapé em Vidro Puro */
+.portfolio-footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.3) !important;
+    font-size: 13px;
+    color: #ffffff !important;
+    text-shadow: 0 1px 4px rgba(0, 30, 50, 0.5);
+    margin-top: auto;
+}
+/* Bloco Sobre Mim - Vidro Cristalino com Brilho Superior */
+.portfolio-sobre {
+    background: rgba(255, 255, 255, 0.2) !important; /* Base translúcida */
+    backdrop-filter: blur(15px) saturate(170%) !important;
+    -webkit-backdrop-filter: blur(15px) saturate(170%);
+    padding: 30px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    box-shadow: 
+        0 12px 30px rgba(0, 40, 80, 0.2), 
+        inset 0 1.5px 1.5px rgba(255, 255, 255, 0.7); /* Efeito chanfrado de vidro */
+    margin-bottom: 35px;
+}
+
+/* Título com degradê aquático interno */
+.portfolio-sobre h2 {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 4px rgba(0, 30, 60, 0.4);
+    letter-spacing: 0.5px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Pequena barra decorativa brilhante abaixo do título */
+.portfolio-sobre h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #00f5d4, #ffffff);
+    border-radius: 2px;
+    margin-top: 4px;
+    box-shadow: 0 0 8px rgba(0, 245, 212, 0.8);
+}
+
+/* Texto do Sobre Mim */
+.portfolio-sobre p {
+    color: #f0fdfa !important;
+    font-size: 15px;
+    line-height: 1.6;
+    text-shadow: 0 1px 2px rgba(0, 30, 60, 0.3);
+    text-align: justify;
+}
